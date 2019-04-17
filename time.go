@@ -31,6 +31,10 @@ func New(t time.Time) Time {
 	return Time{t}
 }
 
+func Now() Time {
+	return Time{time.Now()}
+}
+
 // Microsecond returns the microsecond offset within the nanoseconds specified by t.
 func (t Time) Microsecond() int {
 	return int(math.Round(float64(t.Nanosecond() / 1000)))
