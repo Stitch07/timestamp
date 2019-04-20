@@ -16,7 +16,6 @@ func Diff(earlier, now Time) string {
 	}
 
 	duration := math.Abs(float64(now.Unix() - earlier.Unix()))
-	fmt.Printf("%f\n", duration)
 	if duration < 45 {
 		ret = "seconds"
 		goto addSuffix
